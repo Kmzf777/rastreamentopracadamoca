@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from '@/lib/utils';
 import {
   motion,
@@ -25,7 +27,7 @@ const generateVariants = (
         duration: 0.5,
         ease: 'easeOut',
       },
-    },
+    } as Variant,
   };
 };
 
