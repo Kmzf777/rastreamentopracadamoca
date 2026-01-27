@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 :root {
   /* Cores - Texto */
   --text-primary: #FFFFFF;
@@ -88,6 +95,39 @@
   --font-script: var(--font-script);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
+
+  /* Shadcn Mappings */
+  --color-background: var(--surface-page);
+  --color-foreground: var(--text-primary);
+  
+  --color-card: var(--surface-card);
+  --color-card-foreground: var(--text-primary);
+  
+  --color-popover: var(--surface-card);
+  --color-popover-foreground: var(--text-primary);
+  
+  --color-primary: var(--action-primary);
+  --color-primary-foreground: var(--text-on-brand);
+  
+  --color-secondary: var(--surface-subtle);
+  --color-secondary-foreground: var(--text-primary);
+  
+  --color-muted: var(--surface-subtle);
+  --color-muted-foreground: var(--text-muted);
+  
+  --color-accent: var(--surface-subtle);
+  --color-accent-foreground: var(--text-primary);
+  
+  --color-destructive: #F44336;
+  --color-destructive-foreground: var(--text-primary);
+  
+  --color-border: var(--border-default);
+  --color-input: var(--border-default);
+  --color-ring: var(--border-focus);
+  
+  --radius-lg: var(--radius-lg);
+  --radius-md: var(--radius-md);
+  --radius-sm: var(--radius-sm);
 }
 
 @keyframes fadeInUp {

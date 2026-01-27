@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans, Great_Vibes } from "next/font/google";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${openSans.variable} ${greatVibes.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
