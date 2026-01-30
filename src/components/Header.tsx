@@ -1,13 +1,20 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
+  const pathname = usePathname();
+
+  if (pathname === '/motion') return null;
+
   return (
     <header 
       className={cn(
         "fixed top-0 left-0 w-full z-50 h-[var(--space-20)] flex items-center px-[var(--space-6)] transition-all duration-300",
-        "bg-black/80 backdrop-blur-md border-b border-[var(--border-subtle)] shadow-sm"
+        "bg-black/1 backdrop-blur-md"
       )}
     >
       <div className="container mx-auto flex justify-center items-center h-full w-full">

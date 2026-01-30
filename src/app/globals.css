@@ -16,9 +16,9 @@ body {
   --text-on-brand: #FFFFFF;
   
   /* Cores - Superfícies */
-  --surface-page: #0D0D0D;
-  --surface-section: #000000;
-  --surface-card: #1A1A1A;
+  --surface-page: #422620;
+  --surface-section: #422620;
+  --surface-card: #1A1A1A;  
   --surface-subtle: #262626;
   --surface-elevated: #1A1A1A;
   
@@ -128,21 +128,6 @@ body {
   --radius-lg: var(--radius-lg);
   --radius-md: var(--radius-md);
   --radius-sm: var(--radius-sm);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 body {

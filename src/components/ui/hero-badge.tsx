@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useAnimation, type Variants } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -29,11 +28,6 @@ const sizeVariants: Record<string, string> = {
   lg: "px-5 py-2 text-base gap-2.5",
 };
 
-const iconAnimationVariants: Variants = {
-  initial: { rotate: 0 },
-  hover: { rotate: -10 },
-};
-
 export default function HeroBadge({
   href,
   text,
@@ -44,7 +38,6 @@ export default function HeroBadge({
   className,
   onClick,
 }: HeroBadgeProps) {
-  const controls = useAnimation();
 
   const baseClassName = cn(
     "inline-flex items-center rounded-full border transition-colors",
@@ -54,30 +47,21 @@ export default function HeroBadge({
   );
 
   const content = (
-    <motion.div
+    <div
       className={baseClassName}
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease }}
-      onHoverStart={() => controls.start("hover")}
-      onHoverEnd={() => controls.start("initial")}
     >
       {icon && (
-        <motion.div
+        <div
           className="text-foreground/60 transition-colors group-hover:text-primary"
-          variants={iconAnimationVariants}
-          initial="initial"
-          animate={controls}
-          transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           {icon}
-        </motion.div>
+        </div>
       )}
       <span>{text}</span>
       {endIcon && (
-        <motion.div className="text-foreground/60">{endIcon}</motion.div>
+        <div className="text-foreground/60">{endIcon}</div>
       )}
-    </motion.div>
+    </div>
   );
 
   if (href) {
@@ -89,8 +73,8 @@ export default function HeroBadge({
   }
 
   return (
-    <motion.button onClick={onClick} className="group">
+    <button onClick={onClick} className="group">
       {content}
-    </motion.button>
+    </button>
   );
 }

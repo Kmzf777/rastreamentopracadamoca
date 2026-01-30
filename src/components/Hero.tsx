@@ -7,7 +7,7 @@ export default function Hero() {
       {/* If we had an image, it would go here. For now, a subtle pattern or color */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat opacity-60 z-0"></div>
 
-      <div className="relative z-20 text-center max-w-5xl mx-auto flex flex-col items-center animate-fade-in-up">
+      <div className="relative z-20 text-center max-w-5xl mx-auto flex flex-col items-center">
         <h3 className="font-script text-5xl md:text-6xl text-[var(--action-primary)] mb-[var(--space-4)] font-normal transform -rotate-2">
           Viva a
         </h3>

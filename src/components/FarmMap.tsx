@@ -6,11 +6,14 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 export default function FarmMap() {
-    const position: [number, number] = [-19.812222, -46.334166];
+    const position: [number, number] = [-19.890280825212493, -46.334943676193745];
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
+        const timer = setTimeout(() => {
+            setMounted(true);
+        }, 0);
+        return () => clearTimeout(timer);
     }, []);
 
     const customIcon = useMemo(() => {
@@ -56,7 +59,7 @@ export default function FarmMap() {
                 
                 <Marker position={position} icon={customIcon}>
                     <Popup>
-                        <strong>Fazenda Altos da Pratinha</strong><br />
+                        <strong>Fazenda Divineia</strong><br />
                         Café Praça da Moça<br />
                         Pratinha, MG
                     </Popup>

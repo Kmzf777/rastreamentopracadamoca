@@ -1,41 +1,16 @@
 "use client";
 
 import { cn } from '@/lib/utils';
-import {
-  motion,
-  HTMLMotionProps,
-  SVGMotionProps,
-  Variant,
-} from 'framer-motion';
 import React, { forwardRef } from 'react';
 
 type Direction = 'up' | 'down' | 'left' | 'right';
 
-const generateVariants = (
-  direction: Direction
-): { hidden: Variant; visible: Variant } => {
-  const axis = direction === 'left' || direction === 'right' ? 'x' : 'y';
-  const value = direction === 'right' || direction === 'down' ? 100 : -100;
-
-  return {
-    hidden: { filter: 'blur(10px)', opacity: 0, [axis]: value },
-    visible: {
-      filter: 'blur(0px)',
-      opacity: 1,
-      [axis]: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeOut',
-      },
-    } as Variant,
-  };
-};
+// Keeping these types for compatibility but they are unused in logic now
+type Variant = any; 
 
 const defaultViewport = { amount: 0.3, margin: '0px 0px -100px 0px' };
 
-type MotionComponentProps = HTMLMotionProps<any> & SVGMotionProps<any>;
-
-interface ScrollAnimationProps extends Omit<MotionComponentProps, 'children'> {
+interface ScrollAnimationProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
   variants?: {
@@ -64,30 +39,14 @@ const ScrollAnimation = forwardRef<HTMLDivElement, ScrollAnimationProps>(
     },
     ref
   ) => {
-    const baseVariants = variants || generateVariants(direction);
-    const modifiedVariants = {
-      hidden: baseVariants.hidden,
-      visible: {
-        ...baseVariants.visible,
-        transition: {
-          ...(baseVariants.visible as { transition?: any }).transition,
-          delay,
-        },
-      },
-    };
-
     return (
-      <motion.div
+      <div
         ref={ref}
-        whileInView='visible'
-        initial='hidden'
-        variants={modifiedVariants}
-        viewport={viewport}
         className={cn(className)}
         {...rest}
       >
         {children}
-      </motion.div>
+      </div>
     );
   }
 );

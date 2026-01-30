@@ -42,8 +42,8 @@ export default function ProducerInfo() {
             <InfoItem label="Município" value="Pratinha" />
             <InfoItem label="Altitude Média" value="1300.00 metros" />
             <InfoItem label="Temperatura Média" value="26ºC" />
-            <InfoItem label="Latitude" value="-19.812222" />
-            <InfoItem label="Longitude" value="-46.334166" />
+            <InfoItem label="Latitude" value="-19.890280" />
+            <InfoItem label="Longitude" value="-46.334943" />
             <InfoItem label="Entidades" value="EXPOOCACER, COOPA" />
             <div className="md:col-span-2">
               <InfoItem label="Variedades" value="Catuaí vermelho IAC - 144, Catuaí amarelo IAC - 99" />
