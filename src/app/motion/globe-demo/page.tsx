@@ -1,6 +1,6 @@
 'use client';
 
-import Globe from '../globe';
+import Globe from '@/components/Globe';
 
 export default function GlobeDemoPage() {
   return (
