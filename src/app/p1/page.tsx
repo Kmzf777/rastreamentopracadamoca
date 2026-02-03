@@ -42,7 +42,7 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <InfoItem label="Variedade" value="Arara Peaberry" />
-                <InfoItem label="Classificação" value="Moka Clássico" />
+                <InfoItem label="Tamanho do Grão" value="Moka Clássico" />
                 <div className="flex flex-col space-y-1">
                   <span className="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                     Perfil Sensorial
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ProducerInfo />
+        <ProducerInfo variety="Arara Peaberry" />
       </main>
     </PageWithTransition>
   );
