@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import Globe from './Globe';
+import Earth from '@/components/ui/globe';
 
 const WORDS = [
   "PARABÉNS",
@@ -10,9 +10,10 @@ const WORDS = [
   "ACABOU",
   "DE",
   "COMPRAR",
-  "O",
-  "MELHOR",
-  "CAFÉ",
+  "UM",
+  "DOS",
+  "MELHORES",
+  "CAFÉS",
   "DO",
   "MUNDO"
 ];
@@ -80,7 +81,7 @@ export default function IntroAnimation({ onExitStart }: IntroAnimationProps) {
                 !showGlobe && "translate-y-[100vh] opacity-0",
                 
                 // Active state (CAFÉ to MUNDO): Slightly at bottom
-                showGlobe && !globeExit && "translate-y-[20%] opacity-100",
+                showGlobe && !globeExit && "translate-y-[35%] md:translate-y-[20%] opacity-100",
                 
                 // Exit state (With MUNDO): Move up with the container, so we keep it relative to container or adjust?
                 // If container moves up, this moves with it. 
@@ -94,7 +95,11 @@ export default function IntroAnimation({ onExitStart }: IntroAnimationProps) {
                 globeExit && "-translate-y-[100vh] opacity-0"
             )}
         >
-            <Globe size={800} color="rgba(200, 155, 92, 0.3)" />
+            <Earth 
+              className="w-[180vw] max-w-none left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 md:w-full md:max-w-[800px]" 
+              baseColor={[0.784, 0.608, 0.361]}
+              glowColor={[0.784, 0.608, 0.361]}
+            />
         </div>
 
         {/* Text */}

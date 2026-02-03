@@ -33,6 +33,21 @@ export default function PageWithTransition({ children }: PageWithTransitionProps
     }
   }, [startedExit]);
 
+  // Lock body scroll while animation is active
+  useEffect(() => {
+    if (showAnimation) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [showAnimation]);
+
   // Optional: Unmount animation after it finishes to clean up DOM
   useEffect(() => {
     if (startedExit) {
