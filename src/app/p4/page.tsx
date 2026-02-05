@@ -31,7 +31,7 @@ export default function Home() {
         <section className="py-12 px-6 bg-[var(--surface-card)]">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--text-primary)] uppercase tracking-wider">
-              Praça da Moça – Café Especial Arara
+              Café Especial 100% Arábica – Arara
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto bg-[var(--surface-section)] p-8 rounded-lg shadow-lg border border-[var(--border-color)]">
