@@ -19,7 +19,7 @@ export default function Home() {
         />
         <div className="w-full flex justify-center pb-8 pt-0 -mt-20 md:py-8 md:mt-0 relative z-10">
           <Image
-            src="/catucai2sl.png"
+            src="/2.png"
             alt="Café Praça da Moça"
             width={500}
             height={500}
@@ -31,9 +31,9 @@ export default function Home() {
         <section className="py-12 px-6 bg-[var(--surface-card)]">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--text-primary)] uppercase tracking-wider">
-              Café Especial 100% Arábica – Catucaí 2SL
+              Café Especial 100% Arábica – Canela
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto bg-[var(--surface-section)] p-8 rounded-lg shadow-lg border border-[var(--border-color)]">
               <div className="space-y-4">
                 <InfoItem label="Origem" value="Serra da Canastra – Minas Gerais – Brasil" />
@@ -41,14 +41,14 @@ export default function Home() {
                 <InfoItem label="Fazenda" value="Divinéia" />
               </div>
               <div className="space-y-4">
-                <InfoItem label="Variedade" value="Catucaí 2SL" />
+                <InfoItem label="Variedade" value="Arara e Paraíso" />
                 <InfoItem label="Tamanho do Grão" value="Peneira 17/18" />
                 <div className="flex flex-col space-y-1">
                   <span className="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                     Perfil Sensorial
                   </span>
                   <span className="text-lg font-medium text-[var(--text-primary)]">
-                    Notas de frutas vermelhas e ameixa
+                    Notas especiadas e amadeiradas
                   </span>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ProducerInfo variety="Catucaí 2SL" />
+        <ProducerInfo variety="Canela" />
       </main>
     </PageWithTransition>
   );
